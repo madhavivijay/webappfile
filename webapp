@@ -9,7 +9,7 @@ pipeline {
   }
       stage ('deploy') {
         steps {
-          echo "this is to deploy"
+          sh '''sudo cp -r /home/ec2-user/workspace/webappparallel/webapp/target/webapp.war /home/ec2-user/apache-tomcat-9.0.65/webapps'''
         }
       }
     }
